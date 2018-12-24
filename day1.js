@@ -954,16 +954,16 @@ const input = `-19
 -73375`;
 
 // part 1;
-const numbers = input.split('\n').map(Number);
+const numbers = input.split("\n").map(Number);
 // console.log(numbers.reduce((a,b) => a+b, 0));
 const found = new Set();
 let current = 0;
-loop: while(true) {
+loop: while (true) {
   for (let i = 0; i < numbers.length; i++) {
-    const number = numbers[i]
+    const number = numbers[i];
     current += number;
-    if(found.has(current)) {
-      console.log('got', current);
+    if (found.has(current)) {
+      console.log("got", current);
       break loop;
     }
     found.add(current);
